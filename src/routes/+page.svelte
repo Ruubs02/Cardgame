@@ -1,12 +1,12 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { supabase } from '$lib/supabase';
 
 	function handleRedirect() {
-		goto('/auth/signup'); // Redirect to '/signup' page
+		goto('/game');
 	}
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<h1>Welcome to the Homepage</h1>
 
-<button on:click={handleRedirect}>Go to Login</button>
+<button on:click={handleRedirect}>Create Game</button>

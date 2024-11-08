@@ -1,6 +1,11 @@
 <script lang="ts">
 	import '../app.css';
-	let { children } = $props();
+	import { page } from '$app/stores';
+	import Navbar from '../components/navbar.svelte';
 </script>
 
-{@render children()}
+{#if $page.url.pathname !== '/auth/login' && $page.url.pathname !== '/auth/signup'}
+	<Navbar />
+{/if}
+
+<slot />
